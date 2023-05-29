@@ -1,0 +1,145 @@
+.navbar {
+  margin-left: 0;
+  padding-left: 2.5rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.img-logo {
+  max-height: 70px;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  gap: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.items.active {
+  height: auto;
+}
+
+.nav-item {
+  text-decoration: none;
+  list-style: none;
+  font-size: 17px;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  color: #080f96;
+  background-color: #e0e2f5ce;
+  border-radius: 10px;
+}
+
+.fa-solid {
+  font-size: 25px;
+  padding: 10px 15px;
+  display: none;
+}
+
+.fa-solid:hover {
+  cursor: pointer;
+  color: #080f96;
+  background-color: #e0e2f5ce;
+  border-radius: 10px;
+}
+
+.login {
+  color: #fff;
+  background-color: #120d58;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+/* MI CUENTA */
+.cuenta {
+  color: #120d58;
+  position: relative;
+}
+
+.cuenta::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #120d58;
+  transition: width 0.3s ease;
+}
+
+.cuenta:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 840px) {
+  .navbar {
+    flex-direction: inherit;
+    margin-top: 0;
+  }
+
+  .items {
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    z-index: 999999;
+  }
+
+  .items.active {
+    display: block;
+  }
+
+  .items.active .nav-item {
+    margin: 1.1rem;
+  }
+
+  .fa-solid {
+    display: block;
+  }
+}
