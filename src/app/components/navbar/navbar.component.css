@@ -18,6 +18,7 @@ a {
 .logo {
   display: inline-flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .logo:hover {

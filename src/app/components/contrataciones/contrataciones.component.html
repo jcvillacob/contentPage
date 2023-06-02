@@ -1,0 +1,16 @@
+<div class="hero">
+    <h1>Antes de Contratar</h1>
+    <p>Pasos a tener en cuenta antes de realizar una contratación con un creador de contenido.</p>
+</div>
+
+<div class="container mt-5">
+    <div *ngFor="let step of steps; let i = index" class="row">
+        <div class="col-md-6 text-center texto" [ngClass]="{'order-md-2': i%2 === 1}">
+            <h1>Paso {{i+1}}: {{step.title}}</h1>
+            <p>{{step.description}}</p>
+        </div>
+        <div class="col-md-6" [ngClass]="{'order-md-1': i%2 === 1}">
+            <img [src]="step.image" alt="Imagen paso {{i+1}}" class="img-fluid rounded">
+        </div>
+    </div>
+</div>

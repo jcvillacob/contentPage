@@ -1,0 +1,12 @@
+.hero {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
